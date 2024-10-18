@@ -12,15 +12,16 @@ class FileUsingReaderWriter {
         // String source = src.nextLine();
         FileReader input = new FileReader("eg.txt");
         FileWriter output = new FileWriter("eg2.txt");
-        int ch;
+        BufferedReader reader = new BufferedReader(input);
+        String ch;
         try{
             do{
-                ch = input.read();
-                if (ch != -1) {
-                    output.write((char)ch); 
-                    System.out.println((char)ch);
+                ch = reader.readLine();
+                if (ch != null) {
+                    output.write(ch); 
+                    System.out.println(ch);
                 }
-            } while(ch!=-1);
+            } while(ch!=null);
         } catch(FileNotFoundException fn){
             System.out.println("Handled");
         }
