@@ -1,5 +1,6 @@
-// File handling using reader/writer Classes
-// Write a file handling program in Java with reader/writer.
+// Write a JAVA program that read from a file and write to file by handling all file related exceptions.
+// (use FileInputStream and FileOutputStream classes)  
+
 
 
 package InternalExam;
@@ -10,8 +11,8 @@ class FileUsingReaderWriter {
     public static void main(String[] args) throws IOException {
         //Scanner src = new Scanner(System.in);
         // String source = src.nextLine();
-        FileReader input = new FileReader("eg.txt");
-        FileWriter output = new FileWriter("eg2.txt");
+        FileInputStream input = new FileInputStream("eg.txt");
+        FileOutputStream output = new FileOutputStream("eg2.txt");
         int ch;
         try{
             do{
