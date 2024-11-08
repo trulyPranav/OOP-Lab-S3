@@ -5,9 +5,11 @@ import java.util.Random;
 class ThreadOne extends Thread {
     Random rnd = new Random();
     ThreadTwo t2;
+    ThreadThree t3;
 
-    ThreadOne(ThreadTwo t2) {
+    ThreadOne(ThreadTwo t2, ThreadThree t3) {
         this.t2 = t2;
+        this.t3 = t3;
     }
 
     public void run() {
@@ -16,6 +18,7 @@ class ThreadOne extends Thread {
                 int randomInt = rnd.nextInt(1000);
                 System.out.println("Generated Random Int: " + randomInt);
                 t2.processNumber(randomInt);
+                t3.processNumber(randomInt);
                 Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
@@ -26,11 +29,19 @@ class ThreadOne extends Thread {
 
 class ThreadTwo extends Thread {
     public void processNumber(int number) {
-        if (number % 2 == 0) {
+        if (number % 2 == 0)
             System.out.println("Even: " + number + " | Square: " + (number * number));
-        } else {
-            System.out.println("Odd: " + number);
-        }
+
+    }
+
+    public void run() {
+    }
+}
+
+class ThreadThree extends Thread {
+    public void processNumber(int number) {
+        if(number % 2 != 0)
+            System.out.println("Odd: " + number + " | Cube: " + (number * number * number));            
     }
 
     public void run() {
@@ -39,8 +50,9 @@ class ThreadTwo extends Thread {
 
 class MultiThreading {
     public static void main(String args[]) {
+        ThreadThree t3 = new ThreadThree();
         ThreadTwo t2 = new ThreadTwo();
-        ThreadOne t1 = new ThreadOne(t2);
+        ThreadOne t1 = new ThreadOne(t2,t3);
         t1.start();
     }
 }
