@@ -17,6 +17,7 @@ class ThreadOne extends Thread {
                     ThreadThree t3 = new ThreadThree(randomInt);
                     t3.start();
                 }
+                System.out.println();
                 Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
