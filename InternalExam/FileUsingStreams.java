@@ -5,16 +5,15 @@
 
 package InternalExam;
 import java.io.*;
-//import java.util.*;
 
 class FileUsingReaderWriter {
     public static void main(String[] args) throws IOException {
-        //Scanner src = new Scanner(System.in);
-        // String source = src.nextLine();
-        FileInputStream input = new FileInputStream("eg.txt");
-        FileOutputStream output = new FileOutputStream("eg2.txt");
+        FileInputStream input = null;
+        FileOutputStream output = null;
         int ch;
         try{
+            input = new FileInputStream("eg.txt");
+            output = new FileOutputStream("eg2.txt");
             do{
                 ch = input.read();
                 if (ch != -1) {
