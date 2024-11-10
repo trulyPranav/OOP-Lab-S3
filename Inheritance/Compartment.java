@@ -1,7 +1,7 @@
 package Inheritance;
 
 abstract class Compartment {
-    public abstract void notice();
+    abstract void notice();
 }
 
 class FirstClass extends Compartment{
