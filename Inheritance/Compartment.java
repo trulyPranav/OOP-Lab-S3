@@ -1,4 +1,4 @@
-package InternalExam;
+package Inheritance;
 
 abstract class Compartment {
     public abstract void notice();

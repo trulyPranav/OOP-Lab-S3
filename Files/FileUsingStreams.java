@@ -3,7 +3,7 @@
 
 
 
-package InternalExam;
+package Files;
 import java.io.*;
 
 class FileUsingStreams {

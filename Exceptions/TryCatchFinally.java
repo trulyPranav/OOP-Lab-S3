@@ -1,4 +1,4 @@
-package InternalExam;
+package Exceptions;
 
 import java.util.Scanner;
 

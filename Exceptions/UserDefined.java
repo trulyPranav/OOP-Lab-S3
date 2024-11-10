@@ -1,7 +1,7 @@
 // Write a Java program that reads a list of integers from the user and throws an exception if any numbers are duplicates.
 
 
-package InternalExam;
+package Exceptions;
 import java.util.Scanner;
 
 class UserDefined {

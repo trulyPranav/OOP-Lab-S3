@@ -1,7 +1,7 @@
 // Write a Java program that reads a line of integers, 
 // and then displays each integer, and the sum of all the integers (use StringTokenizer class of java.util)
 
-package InternalExam;
+package StringTokenizer;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
