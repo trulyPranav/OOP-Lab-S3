@@ -1,3 +1,4 @@
+package Sorting;
 import java.util.LinkedList;
 import java.util.Scanner;
 public class DLL
@@ -5,7 +6,7 @@ public class DLL
     public static void main(String[] args)
     {
         LinkedList<String> list = new LinkedList<>();
-        Scanner sc = new Scanner(System.in);
+        Scanner src = new Scanner(System.in);
         int choice;
         do
         {
@@ -15,19 +16,19 @@ public class DLL
             System.out.println("3. Display List");
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
-            choice = sc.nextInt();
-            sc.nextLine();
+            choice = src.nextInt();
+            src.nextLine();
             switch (choice)
             {
                 case 1:
                     System.out.print("Enter element to add: ");
-                    String elementToAdd = sc.nextLine();
+                    String elementToAdd = src.nextLine();
                     list.add(elementToAdd);
                     System.out.println("Element added.");
                     break;
                 case 2:
                     System.out.print("Enter element to delete: ");
-                    String elementToDelete = sc.nextLine();
+                    String elementToDelete = src.nextLine();
                     if (list.remove(elementToDelete))
                     {
                     System.out.println("Deleted element: " +
@@ -50,5 +51,6 @@ public class DLL
                     System.out.println("Invalid ");
             }
         } while (choice != 4);
+        src.close();
     }   
 }

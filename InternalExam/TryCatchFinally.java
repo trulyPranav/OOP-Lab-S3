@@ -11,13 +11,14 @@ class TryCatchFinally {
         try{
             if(a/b == 0)
                     throw new ArithmeticException("Division by Zero Encountered");
-            System.out.println("Doing a/b: " a/b);
+            System.out.println("Doing a/b: " + a/b);
         }
         catch(ArithmeticException ae){
             System.out.println("Exception Caught Successfully: " + ae);
         }
         finally{
             System.out.println("Inside Finally!");
+            src.close();
         }
     }
 }

@@ -1,3 +1,4 @@
+package Sorting;
 import java.util.*;
 import java.util.Scanner;
 public class BinarySearch
@@ -53,5 +54,6 @@ public class BinarySearch
             }
         }
         while (choice != 4);
+        sc.close();
     }
 }
