@@ -7,7 +7,7 @@ package InternalExam;
 import java.io.*;
 //import java.util.*;
 
-class FileUsingReaderWriter {
+class FileUsingStreams {
     public static void main(String[] args) throws IOException {
         //Scanner src = new Scanner(System.in);
         // String source = src.nextLine();
