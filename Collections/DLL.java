@@ -1,4 +1,4 @@
-package Sorting;
+package Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
 public class DLL
