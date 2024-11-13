@@ -4,14 +4,14 @@ import java.awt.event.*;
 public class Calculator extends JFrame implements ActionListener
 {
         
-    private JTextField textField;
-    private JButton[] numberButtons = new JButton[10];
-    private JButton[] functionButtons = new JButton[8];
-    private JButton addButton, subButton, mulButton, divButton;
-    private JButton decButton, equButton, delButton, clrButton;
-    private JPanel panel;
-    private double num1 = 0, num2 = 0, result = 0;
-    private char operator;
+    JTextField textField;
+    JButton[] numberButtons = new JButton[10];
+    JButton[] functionButtons = new JButton[8];
+    JButton addButton, subButton, mulButton, divButton;
+    JButton decButton, equButton, delButton, clrButton;
+    JPanel panel;
+    double num1 = 0, num2 = 0, result = 0;
+    char operator;
     Calculator()
     {
         setTitle("Calculator Simulation");
@@ -20,8 +20,8 @@ public class Calculator extends JFrame implements ActionListener
         setLayout(null);
         textField = new JTextField();
         textField.setBounds(50, 25, 300, 50);
-        textField.setFont(new Font("Arial", Font.PLAIN, 28));
-        textField.setEditable(false);
+        // textField.setFont(new Font("Arial", Font.PLAIN, 28));
+        // textField.setEditable(false);
         add(textField);
         addButton = new JButton("+");
         subButton = new JButton("-");
@@ -42,18 +42,20 @@ public class Calculator extends JFrame implements ActionListener
         for (int i = 0; i < 8; i++)
         {
             functionButtons[i].addActionListener(this);
-            functionButtons[i].setFont(new Font("Arial", Font.PLAIN,
-            24));
-            functionButtons[i].setFocusable(false);
+            // functionButtons[i].setFont(new Font("Arial", Font.PLAIN,
+            // 24));
+            // functionButtons[i].setFocusable(false);
         }
         for (int i = 0; i < 10; i++)
         {
+            
             numberButtons[i] = new JButton(String.valueOf(i));
             numberButtons[i].addActionListener(this);
-            numberButtons[i].setFont(new Font("Arial", Font.PLAIN, 24));
-            numberButtons[i].setFocusable(false);
+            // numberButtons[i].setFont(new Font("Arial", Font.PLAIN, 24));
+            // numberButtons[i].setFocusable(false);
         }
         panel = new JPanel();
+        panel.setBackground(Color.BLUE);
         panel.setBounds(50, 100, 300, 300);
         panel.setLayout(new GridLayout(4, 4, 10, 10));
         panel.add(numberButtons[1]);
@@ -122,24 +124,24 @@ public class Calculator extends JFrame implements ActionListener
             switch (operator)
             {
             case '+':
-            result = num1 + num2;
-            break;
+                result = num1 + num2;
+                break;
             case '-':
-            result = num1 - num2;
-            break;
+                result = num1 - num2;
+                break;
             case '*':
-            result = num1 * num2;
-            break;
+                result = num1 * num2;
+                break;
             case '/':
-            try
-            {
-            result = num1 / num2;
-            } catch (ArithmeticException ex)
-            {
-            textField.setText("Error: Divide by 0");
-            return;
-            }
-            break;
+                try
+                {
+                    result = num1 / num2;
+                } catch (ArithmeticException ex)
+                {
+                    textField.setText("Error: Divide by 0");
+                return;
+                }
+                break;
             }
             textField.setText(String.valueOf(result));
             num1 = result;

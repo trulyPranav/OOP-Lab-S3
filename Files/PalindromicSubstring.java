@@ -2,6 +2,10 @@ package Files;
 import java.util.*;
 import java.io.*;
 
+// Read String from User
+// Longest Palindromic Substring => Input!
+// Odd or Even Plaindrome => Error!
+
 public class PalindromicSubstring {
     static boolean isPalindrome(String s){
         for(int i=0; i<s.length(); i++){
@@ -23,7 +27,7 @@ public class PalindromicSubstring {
                 longestString = token;
             }
         }
-        FileWriter fOut = new FileWriter("eg2.txt", true);
+        FileWriter fOut = new FileWriter("hello.txt", true);
         //System.out.println(longestString);
         try{
             char buffer[] = new char[longestString.length()];

@@ -10,8 +10,8 @@ class FileUsingReaderWriter {
     public static void main(String[] args) throws IOException {
         //Scanner src = new Scanner(System.in);
         // String source = src.nextLine();
-        FileReader input = new FileReader("eg.txt");
-        FileWriter output = new FileWriter("eg2.txt");
+        FileReader input = new FileReader("eg6.txt");
+        FileWriter output = new FileWriter("eg7.txt");
         BufferedReader reader = new BufferedReader(input);
         String ch;
         try{

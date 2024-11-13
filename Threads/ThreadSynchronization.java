@@ -9,12 +9,13 @@ class Printer {
             e.printStackTrace();
         }
         System.out.println("Finished printing: " + docName);
+        System.out.println();
     }
 }
 
 class PrintDoc extends Thread {
-    private Printer printer;
-    private String docName;
+    Printer printer;
+    String docName;
 
     PrintDoc(Printer printer, String docName) {
         this.printer = printer;

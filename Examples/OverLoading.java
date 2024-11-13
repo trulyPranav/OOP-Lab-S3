@@ -3,11 +3,12 @@ package Examples;
 class OverLoading {
     int x;
     final int u;
+    // Constructor OverLoading
     OverLoading(int x, int u){
         this.x = x;
         this.u = u;
     }
-
+    // MEthod Overloading
     void calc(){
         System.out.println(x);
     }

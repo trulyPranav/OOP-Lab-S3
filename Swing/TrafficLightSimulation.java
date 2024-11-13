@@ -25,6 +25,7 @@ ActionListener
         radioPanel.add(redButton);
         radioPanel.add(yellowButton);
         radioPanel.add(greenButton);
+        radioPanel.setBackground(Color.GRAY);
         lightPanel = new JPanel()
         {
             protected void paintComponent(Graphics g)
