@@ -1,4 +1,4 @@
-package Examples;
+package PracticeProblems.Examples;
 
 import java.lang.Thread;
 

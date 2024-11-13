@@ -1,4 +1,4 @@
-package Threads;
+package PracticeProblems.Threads;
 import java.lang.Thread;
 import java.util.Random;
 
