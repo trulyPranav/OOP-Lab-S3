@@ -18,12 +18,12 @@ class Transpose {
             for(int j=0; j<columns; j++)
                 matrix[i][j] = src.nextInt();
         }
+        src.close();
         transpose = new int[columns][rows];
         for(int i=0; i<rows; i++){
             for(int j=0; j<columns; j++)
                  transpose[j][i] = matrix[i][j];
         }
-
         System.out.println("Transpose is: ");
         for(int[] row: transpose){
             for(int column: row){
