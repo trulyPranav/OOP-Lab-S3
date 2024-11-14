@@ -7,8 +7,8 @@ class Garbage {
         System.out.println("Garbage Collection Performed Successfully!");
     }
     public static void main(String[] args) {
-        Garbage g1 = new Garbage(), g2 = new Garbage();
-        g2 = null;
+        Garbage g1 = new Garbage();
+        g1 = null;
         System.gc();
     }
 }

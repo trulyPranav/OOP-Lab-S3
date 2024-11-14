@@ -91,5 +91,6 @@ class BankAccount {
                     break;
             }
         }
+        src.close();
     }
 }
