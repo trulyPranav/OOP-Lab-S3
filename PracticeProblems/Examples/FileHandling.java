@@ -8,8 +8,9 @@ class FileHandling {
         FileOutputStream out = null;
         FileInputStream input = null;
         FileOutputStream output = null;
+        Scanner src = null;
         try{
-            Scanner src = new Scanner(System.in);
+            src = new Scanner(System.in);
             String s = src.nextLine();
             byte[] buffer = s.getBytes();
 
@@ -31,6 +32,7 @@ class FileHandling {
             out.close();
             input.close();
             output.close();
+            src.close();
         }
     }
 }

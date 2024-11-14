@@ -1,6 +1,4 @@
 package Examples;
-import java.lang.Exception;
-// try catch throw throws and finally
 
 class ErrorHanlding {
     public static void main(String[] args) throws ArithmeticException {

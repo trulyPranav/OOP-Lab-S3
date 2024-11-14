@@ -1,4 +1,4 @@
-package PracticeProblems.Examples;
+package Examples;
 
 import java.io.*;
 

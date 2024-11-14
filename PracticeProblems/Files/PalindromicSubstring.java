@@ -1,4 +1,4 @@
-package PracticeProblems.Files;
+package Files;
 import java.util.*;
 import java.io.*;
 

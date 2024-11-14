@@ -2,7 +2,7 @@
 // Write a file handling program in Java with reader/writer.
 
 
-package PracticeProblems.Files;
+package Files;
 import java.io.*;
 //import java.util.*;
 
